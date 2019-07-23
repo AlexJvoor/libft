@@ -12,12 +12,15 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 10000
 
+# include <ctype.h>
+# include <fcntl.h>
+# include <inttypes.h>
 # include <stdlib.h>
 # include <stdio.h>
-# include <unistd.h>
 # include <string.h>
-# include <inttypes.h>
+# include <unistd.h>
 
 typedef	struct		s_list
 {
@@ -29,6 +32,8 @@ typedef	struct		s_list
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_chrcmp(char c1, char c2);
+int					ft_findchr(char *s, char c);
+int					ft_get_next_line(const int fd, char **line);
 int					ft_isalnum(int ch);
 int					ft_isalpha(int ch);
 int					ft_isascii(int ch);
